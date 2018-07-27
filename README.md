@@ -1,0 +1,1 @@
+http://brainden.com/logic-riddles.htm
