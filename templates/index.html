@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>"Riddle Me This" </title>
-</head>
-<body>
-    
-    <h1>Python Riddle Game</h1>
-    
-    <h2>First, pick a username!</h2>
-    
-    <body>
+{% extends 'base.html' %} 
+{% block content %}
+
+<h2>{{ page_title }}</h2>
+
+
+
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+       
     <form method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
-        <button>Enter</button>
+        <button>Go to chat!</button>
     </form>
-</body>
     
-</body>
-</html>
+        </div>
+        
+       
+        
+        </div>
+     </div>
+     
+{% endblock %}
