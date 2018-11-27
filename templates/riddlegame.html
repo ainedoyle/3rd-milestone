@@ -1,25 +1,32 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 <h2>{{ page_title }}</h2>
 
-<html>
-
 <head>
-    <title>Home Page</title>
-</head>
-
-<body>
-    <h1>Welcome, {{ username }}</h1>
-    {% for message in chat_messages %}
-    <p>{{ message }}</p>
-    {% endfor %}
-
-    <script>
-        setTimeout(function() {
-            location.reload();
-        }, 5000);
-    </script>
-</body>
-
-</html>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type=text/javascript>
+			$(function() {
+			  $('a#process_input').bind('click', function() {
+				$.getJSON('/background_process', {
+				  proglang: $('input[name="proglang"]').val(),
+				}, function(data) {
+				  $("#result").text(data.result);
+				});
+				return false;
+			  });
+			});
+		</script>
+	</head>
+  
+	<body>
+		<div class='container'>
+		<h3>Welcome {{ username }}! Which is the best programming language of them all?</h3>
+			<form>
+				<input type=text size=5 name=proglang>
+				<a href=# id=process_input><button class='btn btn-default'>Submit</button></a>
+			</form>
+		<p id=result></p>
+		</div>
+	</body>
 
 {% endblock %}
