@@ -1,32 +1,22 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h2>{{ page_title }}</h2>
 
-<head>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type=text/javascript>
-			$(function() {
-			  $('a#process_input').bind('click', function() {
-				$.getJSON('/background_process', {
-				  proglang: $('input[name="proglang"]').val(),
-				}, function(data) {
-				  $("#result").text(data.result);
-				});
-				return false;
-			  });
-			});
-		</script>
-	</head>
-  
-	<body>
-		<div class='container'>
-		<h3>Welcome {{ username }}! Which is the best programming language of them all?</h3>
-			<form>
-				<input type=text size=5 name=proglang>
-				<a href=# id=process_input><button class='btn btn-default'>Submit</button></a>
-			</form>
-		<p id=result></p>
-		</div>
-	</body>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %} {% endwith %}
 
+        <form method="POST" name="sentMessage" id="contactForm">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Answer</label>
+                    <input type="text" class="form-control" placeholder="Answer" name="answer" id="answer" required data-validation-required-message="Enter your answer.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
 {% endblock %}
