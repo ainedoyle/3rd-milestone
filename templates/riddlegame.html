@@ -1,22 +1,19 @@
-{% extends 'base.html' %} {% block content %}
-<h2>{{ page_title }}</h2>
+{% extends 'base.html' %}
+{% block content %}
 
-<div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-        {% with messages = get_flashed_messages() %} {% if messages %}
-        <ul class="flashes">
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %} {% endwith %}
-
-        <form method="POST" name="sentMessage" id="contactForm">
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                    <label>Answer</label>
-                    <input type="text" class="form-control" placeholder="Answer" name="answer" id="answer" required data-validation-required-message="Enter your answer.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
+    <div class="row">
+        <em>{{ question }}</em>
+    </div>
+    
+    <form method="POST" class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+			<form method="post">
+				<input id="answer" name="answer" type="text"> <button>Submit answer</button>
+			</form>
+		</div>
+		
+    </form>
 {% endblock %}
+
+
+	
