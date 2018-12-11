@@ -82,3 +82,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 
 http://brainden.com/logic-riddles.htm
+
+Code Institute Solutions/ Proposed-Flask-Quiz
+

@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
 <head>
-	<title></title>
+	<title>BMI Calc</title>
+	
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	
 </head>
+
+<h1>BMI Calc</h1>
+
 <body>
-	{% extends 'base.html' %}
-	{% block content %}
-	<h2>{{ page_title }}</h2>
-	<form action="{{url_for('new_game')}}" class="justify-content-md-left" method="post">
-		<div class="col-lg-8 col-md-10 mx-auto">
-			<form method="post">
-				<label for="username">Username:</label> <input id="username" name="username" type="text"> <button>Click here to play!</button>
-			</form>
-		</div>
+	
+<div>
+	<form class ="pure-form" method="POST" action="/">
+		Enter Weight:<br>
+		<input type="text" name="weight"><br>
+		Enter height:<br>
+		<input type="text" name="height"><br>
+		<button type="submit" class="pure-button pure-button-primary" value="Submit">submit</button>
+		
 	</form>
+	
+</div>
+
+<br>
+
+<div>
+	
+	
+</div>
 </body>
-</html>
-{% endblock %}
