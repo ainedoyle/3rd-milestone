@@ -1,18 +1,18 @@
 [ {
-        "name": "Riddle1",
-        "riddle": "What has hands but can not clap?",
-        "answer": "A clock."
+
+        "question": "What has hands but can not clap?",
+        "answer": "clock"
     },
     
     {
-        "name": "Riddle2",
-        "riddle": "Feed me and I live, yet give me a drink and I die.",
-        "answer": "Fire."
+    
+        "question": "Feed me and I live, yet give me a drink and I die.",
+        "answer": "fire"
     },
     
     {
-        "name": "Riddle3",
-        "riddle": "What invention lets you look right through a wall?",
-        "answer": "Window."
+       
+        "question": "What invention lets you look right through a wall?",
+        "answer": "window"
     }
 ]

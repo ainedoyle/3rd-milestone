@@ -1,8 +1,7 @@
 # Your Project's Name
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+I decided to do a BMI calculator instead of a riddle game for the Python Milestone Project, as I found Python difficult when it comes to make a logic based game, due to work conflicts and personal circumstances that have occured during the year. 
+I personally feel that this is a straightforward way to make a Python project with Flask, as I can understand the code better. Credit to Udemy for the tutorial. 
  
 ## UX
  

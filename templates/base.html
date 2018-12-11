@@ -1,11 +1,11 @@
 <html>
 
 <head>
-    <title>Riddle Me This</title>
+    <title>Hello Flask</title>
 
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/clean-blog.min.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/styles.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
 </head>
 
 <body>
@@ -21,11 +21,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                       <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('send_message') }}">Scoreboard</a>
                     </li>
                 </ul>
             </div>
@@ -33,13 +30,13 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead">
+    <header class="masthead" style="background-image: url('')">
+        <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <h1>Riddle-Me-This</h1>
-                        <span class="subheading">A guessing game.</span>
+                        <h1>Riddle Me This</h1>
                     </div>
                 </div>
             </div>
@@ -48,14 +45,56 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
     <!-- Main Content -->
     <div class="container">
-        {% block content %} 
-        {% endblock %}
+        <header>
+            {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+            <div class="alert alert-warning" role="alert">{{ message }}</div>
+            {% endfor %}
+            {% endwith %}
+        </header>
+        {% block content %} {% endblock %}
     </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
