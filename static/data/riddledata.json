@@ -1,18 +1,7 @@
-[ {
+[{
+        "name": "Thorin Oakenshield",
+        "description": "Thorin II, also called the Oakenshield, King under the Mountain or the Mountain King, was the son of Thráin II, the older brother of Frerin and Dís, the grandson of King Thrór and the uncle of Fíli and Kíli. Thorin was best known for his deeds as leader of a company that infiltrated the lost Kingdom under the Mountain to take it back from Smaug and for leading an alliance of Men, Dwarves, and Elves in the Battle of the Five Armies.",
+        "image_source": "http://www.panhistoria.com/Stacks/Novels/characterimages/T27293.jpg",
+        "url": "thorin"
 
-        "question": "What has hands but can not clap?",
-        "answer": "clock"
-    },
-    
-    {
-    
-        "question": "Feed me and I live, yet give me a drink and I die.",
-        "answer": "fire"
-    },
-    
-    {
-       
-        "question": "What invention lets you look right through a wall?",
-        "answer": "window"
-    }
 ]

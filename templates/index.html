@@ -1,32 +1,45 @@
-<!doctype html>
+{% extends 'base.html' %}
+{% block content %}
+
 
 <head>
-	<title>BMI Calc</title>
+	<title>BMI Calculator</title>
 	
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-	
+
 </head>
 
-<h1>BMI Calc</h1>
-
-<body>
+<div class="row justify-content-center">
+<div class="col-6">
+<h2>Welcome!</h2>
+<p>Use this calculator to calculate your Body Mass Index!</p>    
 	
 <div>
 	<form class ="pure-form" method="POST" action="/">
-		Enter Weight:<br>
+		Enter Weight (kgs):<br>
 		<input type="text" name="weight"><br>
-		Enter height:<br>
+		Enter height (cms):<br>
 		<input type="text" name="height"><br>
 		<button type="submit" class="pure-button pure-button-primary" value="Submit">submit</button>
 		
 	</form>
 	
 </div>
+</div>
+</div>
 
 <br>
 
-<div>
-	
-	
+<div class ="container">
+<div class="row justify-content-center">
+<div class="col-4">
+	{% if bmi %}
+		<p>Your BMI is {{ bmi }}</p>
+	{% endif %}
 </div>
-</body>
+</div>
+
+
+
+
+{% endblock %}
+

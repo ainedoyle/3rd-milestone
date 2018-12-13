@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Hello Flask</title>
+    <title>BMI Calculator</title>
 
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css" />
@@ -17,26 +17,18 @@
           <i class="fa fa-bars"></i>
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-                    </li>
-                       <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('send_message') }}">Scoreboard</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('')">
+    <header class="masthead" style="background-image: url('static/img/apple-3851446_1920.jpg')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <h1>Riddle Me This</h1>
+                	<h1>BMI Calculator</h1>
                     </div>
                 </div>
             </div>
@@ -47,14 +39,8 @@
 <br>
     <!-- Main Content -->
     <div class="container">
-        <header>
-            {% with messages = get_flashed_messages() %}
-            {% for message in messages %}
-            <div class="alert alert-warning" role="alert">{{ message }}</div>
-            {% endfor %}
-            {% endwith %}
-        </header>
-        {% block content %} {% endblock %}
+        {% block content %} 
+        {% endblock %}
     </div>
 
     <hr>
