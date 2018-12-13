@@ -1,86 +1,79 @@
-# Your Project's Name
+# BMI calculator
 
-I decided to do a BMI calculator instead of a riddle game for the Python Milestone Project, as I found Python difficult when it comes to make a logic based game, due to work conflicts and personal circumstances that have occured during the year. 
+I decided to do a simple BMI calculator instead of a riddle game for the Python Milestone Project, as I found Python difficult when it comes to make a logic based game, due to work conflicts and personal circumstances that have occured during the year. 
 I personally feel that this is a straightforward way to make a Python project with Flask, as I can understand the code better. Credit to Udemy for the tutorial. 
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+- As a user type, I want to know my BMI
+- As a user, I want to use a app that can calculate my BMI
+- As a user, I want to have a place to input my information.
+- As a user, I want to have a result from inputting my information.
+- As a user, I want the design to be clean and straightforward.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea
+There are two input spaces for the user to type in their height (in cms) and weight (in kgs). 
+When they hit submit, it should calculate their body mass index.
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [Python](https://www.python.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Jinja2](http://jinja.pocoo.org/docs/2.10/)
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Index.html
+- Click on link
+- Go to the calculator
+- Input weight and height
+- Click Submit
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+If the site is running, a BMI results should appear.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+How to deploy to Heroku:
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+First, create a new Heroku account and create new app. Then type the following into terminal:
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+- $heroku 
+- $heroku login
+- $heroku apps
+- $git remote -v
+- $git remote add heroku https://github.com/ainedoyle/3rd-milestone
+- $git push -u heroku master
+- $sudo pip3 freeze --local > requirements.txt
+- $echo web: python run.py > Procfile
+Deployed at: https://third-milestone-project.herokuapp.com/
 
 ## Credits
 
+
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+
+https://getbootstrap.com/docs/4.0/layout/grid/
+
+https://www.udemy.com/python-flask-for-beginners/learn/v4/overview
+
+https://pixabay.com/en/apple-healthy-fruit-calories-red-3851446/
+
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were obtained from Pixabay
 
 ### Acknowledgements
 
 - I received inspiration for this project from X
 
+Code Institute 
 
-http://brainden.com/logic-riddles.htm
+Udemy
 
-Code Institute Solutions/ Proposed-Flask-Quiz
+Pixabay
 
